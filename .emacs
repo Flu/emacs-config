@@ -71,20 +71,15 @@ global-set-key [f8] 'neotree-toggle)
 (require 'sublimity-scroll)
 (sublimity-mode 1)
 
-;; Spaceline
-;(require 'spaceline-config)
-;(spaceline-emacs-theme)
-
 ;; Doom-modeline
 (require 'doom-modeline)
 (doom-modeline-mode 1)
 
+;; Custom functions for day-to-day operations
+
 (defun switch-to-other-buffer()
   "Switches to the most recent buffer"
-  (switch-to-buffer (other-buffer))
-  )
-
-;; Custom functions for day-to-day operations
+  (switch-to-buffer (other-buffer)))
 
 (defmacro get-file-type(filepath)
   `(pathname-type (pathname ,filepath)))
